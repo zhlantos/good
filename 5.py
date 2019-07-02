@@ -199,10 +199,10 @@ def pilih():
             if zedd == '2':
                 r = requests.get('https://zhulant.000webhostapp.com/manusia1.7/menuhack.txt').text
                 if 'tutup' in r:
-					print '\x1b[1;91m[!] Dikunci'
-						keluar()
+				print '\x1b[1;91m[!] Dikunci'
+				keluar()
                 elif 'buka' in r:
-						menu_hack()
+					menu_hack()
             else:
                 if zedd == '3':
                     menu_bot()
