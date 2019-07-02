@@ -627,12 +627,12 @@ def pilih_super():
 							raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
 							super()
 
-                else:
-					if peak == '0':
-						menu_hack()
 					else:
-						print '\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m' + peak + ' \x1b[1;91mTidak ada'
-						pilih_super()
+						if peak == '0':
+							menu_hack()
+						else:
+							print '\x1b[1;91m[\xe2\x9c\x96] \x1b[1;97m' + peak + ' \x1b[1;91mTidak ada'
+							pilih_super()
     print '\x1b[1;91m[+] \x1b[1;92mJumlah ID \x1b[1;91m: \x1b[1;97m' + str(len(id))
     jalan('\x1b[1;91m[\xe2\x9c\xba] \x1b[1;92mTunggu sebentar \x1b[1;97m...')
     titik = ['.   ', '..  ', '... ']
