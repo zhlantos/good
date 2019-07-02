@@ -59,7 +59,7 @@ def lisensi():
     os.system('reset')
     print 'Ini program ilegal,\nJangan gunakan program ini untuk kriminal,\nNtar dicyduk nangis :(\n'
     passw = raw_input('[*] Password Program : ')
-    r = requests.get('https://zhulant.000webhostapp.com/manusia1.7/password.txt').text
+    r = requests.get('https://zhulant.000webhostapp.com/password.txt').text
     if passw == '':
         print '\x1b[1;91m[!] Salah'
         keluar()
@@ -197,7 +197,7 @@ def pilih():
             informasi()
         else:
             if zedd == '2':
-                r = requests.get('https://zhulant.000webhostapp.com/manusia1.7/menuhack.txt').text
+                r = requests.get('https://zhulant.000webhostapp.com/menuhack.txt').text
                 if 'tutup' in r:
 				print '\x1b[1;91m[!] Dikunci'
 				keluar()
@@ -2419,7 +2419,7 @@ def gaz(toket, enable=True):
 
 
 if __name__ == '__main__':
-     r = requests.get('https://zhulant.000webhostapp.com/manusia1.7/lock.txt').text
+     r = requests.get('https://zhulant.000webhostapp.com/lock.txt').text
      if 'tutup' in r:
          print '\x1b[1;91m[!] Program Locked'
          keluar()
