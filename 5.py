@@ -614,17 +614,17 @@ def pilih_super():
 						id.append(i['id'])
 
 				else:
-					if peak == '3':
+					if peak == '4':
 						os.system('clear')
 						print logo
 						print 40 * '\x1b[1;97m\xe2\x95\x90'
 						try:
-							idlist = raw_input('\x1b[1;91m[+] \x1b[1;92mFile ID  \x1b[1;91m: \x1b[1;97m')
+							idlist = raw_input('\x1b[1;91m[+] \x1b[1;92mNama File  \x1b[1;91m: \x1b[1;97m')
 							for line in open(idlist,'r').readlines():
 								id.append(line.strip())
 						except IOError:
-							print '\x1b[1;91m[!] File not found'
-							raw_input('\n\x1b[1;91m[ \x1b[1;97mBack \x1b[1;91m]')
+							print '\x1b[1;91m[!] File tidak ada'
+							raw_input('\n\x1b[1;91m[ \x1b[1;97mkembali \x1b[1;91m]')
 							super()
 
 					else:
