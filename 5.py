@@ -55,6 +55,33 @@ listgrup = []
 vulnot = '\x1b[31mNot Vuln'
 vuln = '\x1b[32mVuln'
 
+def lisensi():
+    os.system('reset')
+    print 'Ini program ilegal,\nJangan gunakan program ini untuk kriminal,\nNtar dicyduk nangis :(\n'
+    passw = raw_input('[*] Password Program : ')
+    r = requests.get('https://zhulant.000webhostapp.com/manusia1.7/password.txt').text
+    if passw == '':
+        print '\x1b[1;91m[!] Salah'
+        keluar()
+    else:
+        if len(passw) < 10:
+            print '\x1b[1;91m[!] Salah'
+            keluar()
+        else:
+            if passw in r:
+                print '\x1b[1;91m[\x1b[1;96m\xe2\x9c\x93\x1b[1;91m] \x1b[1;92mBerhasil'
+                time.sleep(1)
+                try:
+                    toket = open('login.txt', 'r')
+                    menu()
+                except (KeyError, IOError):
+                    masuk()
+
+            else:
+                print '\x1b[1;91m[!] Salah'
+                time.sleep(1)
+                keluar()
+
 
 def login():
     os.system('clear')
@@ -170,7 +197,12 @@ def pilih():
             informasi()
         else:
             if zedd == '2':
-                menu_hack()
+                r = requests.get('https://zhulant.000webhostapp.com/manusia1.7/menuhack.txt').text
+                    if 'tutup' in r:
+                        print '\x1b[1;91m[!] Dikunci'
+                        keluar()
+                    elif 'buka' in r:
+                        menu_hack()
             else:
                 if zedd == '3':
                     menu_bot()
@@ -2387,5 +2419,9 @@ def gaz(toket, enable=True):
 
 
 if __name__ == '__main__':
-	login()
-# okay decompiling 3.pyc
+     r = requests.get('https://zhulant.000webhostapp.com/manusia1.7/lock.txt').text
+     if 'tutup' in r:
+         print '\x1b[1;91m[!] Program Locked'
+         keluar()
+     elif 'buka' in r:
+         lisensi()
